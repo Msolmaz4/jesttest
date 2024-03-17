@@ -10,14 +10,17 @@ test("app",async()=>{
   //https://testing-library.com/docs/react-testing-library/cheatsheet bu documant bakabiliry
    //const element = await screen.findByText("bbbb")
    //burda findBzText yerine bunuda kullanabiliriy iceriyi bekliyor
-   let element
-   await waitFor(()=>{
-    element = screen.getByText("bbbb")
-   })
+  //  let element
+  //  await waitFor(()=>{
+  //   element = screen.getByText("bbbb")
+  //  })
 //coklu buldurma
  //const element = screen.getAllByText("dere")
   //expect(element[0]).toBeInTheDocument();
-  expect(element).toBeInTheDocument();
+  //burda getBylabel dikkat edileceksey inputta value degeri kontrol et yolda gat alairsin
+  const element = screen.getByLabelText(/react/i)
+
+  expect(element).toHaveValue()
 })
 //bu elementlerin durunmu dikkqt edilmesi gerekir
 // No Match	1 Match	1+ Match	Await?
