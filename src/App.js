@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="App">
-  <input data-testid = "test" value={"testing"}></input>
+
   
     </div>
   );

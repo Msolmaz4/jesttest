@@ -23,8 +23,11 @@ test("app",async()=>{
  //const element = screen.getByTitle("test")
  //BURDA dikka tedilecekolan sey element[0]veya kacinci olunca dikkat ed
  //const element = screen.getAllByRole("button")
-  const element = screen.getByTestId("test")
-  expect(element).toBeInTheDocument()
+  //const element = screen.getByTestId("test") bu piyadas en cok kullanilan metod 
+ // const element = screen.getByText("Link")
+ // expect(element.href).toContain("")//burda  href attributuna sahip olan link genelde boyle bakilir 
+
+ 
 })
 //bu elementlerin durunmu dikkqt edilmesi gerekir
 // No Match	1 Match	1+ Match	Await?
