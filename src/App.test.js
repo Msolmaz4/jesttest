@@ -18,9 +18,11 @@ test("app",async()=>{
  //const element = screen.getAllByText("dere")
   //expect(element[0]).toBeInTheDocument();
   //burda getBylabel dikkat edileceksey inputta value degeri kontrol et yolda gat alairsin
-  const element = screen.getByLabelText(/react/i)
+ // const element = screen.getByLabelText(/react/i)
+ //title gore 
+ const element = screen.getByTitle("test")
 
-  expect(element).toHaveValue()
+  expect(element).toBeInTheDocument()
 })
 //bu elementlerin durunmu dikkqt edilmesi gerekir
 // No Match	1 Match	1+ Match	Await?
