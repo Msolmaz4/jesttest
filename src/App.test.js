@@ -1,18 +1,26 @@
-import { getByText, queryByText, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 //hangi sazfalari test edecegim
 import App from './App';
 
-test("app",async()=>{
+test("app",()=>{
   render(<App/>)
   // queryByText de yoklugunu kontrol edeceksin
   // getByText= varligini kontroledeceksin expect("elleme").not.toBe...
   //burda findBytext burda asyn kullaniriy app usettimey degisme durumu awit kullaniriy burasi onemli
   //https://testing-library.com/docs/react-testing-library/cheatsheet bu documant bakabiliry
-  const element = await screen.findByText("bbbb")
-  expect(element).toBeInTheDocument();
+ //const element = await screen.findByText("bbbb")
+//coklu buldurma
+ const element = screen.getAllByText("dere")
+  expect(element[0]).toBeInTheDocument();
 })
-
-
+//bu elementlerin durunmu dikkqt edilmesi gerekir
+// No Match	1 Match	1+ Match	Await?
+// getBy	throw	return	throw	No burda iki tane varsa hata doner
+// findBy	throw	return	throw	Yes
+// queryBy	null	return	throw	No
+// getAllBy	throw	array	array	No  burda fazlaise hata donmez fiika
+// findAllBy	throw	array	array	Yes
+// queryAllBy	[]	array	array	No
 
 
 
