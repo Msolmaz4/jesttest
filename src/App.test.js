@@ -21,9 +21,10 @@ test("app",async()=>{
  // const element = screen.getByLabelText(/react/i)
  //title gore 
  //const element = screen.getByTitle("test")
- const element = screen.getAllByRole("button")
-
-  expect(element[0]).toBeInTheDocument()
+ //BURDA dikka tedilecekolan sey element[0]veya kacinci olunca dikkat ed
+ //const element = screen.getAllByRole("button")
+  const element = screen.getByTestId("test")
+  expect(element).toBeInTheDocument()
 })
 //bu elementlerin durunmu dikkqt edilmesi gerekir
 // No Match	1 Match	1+ Match	Await?
