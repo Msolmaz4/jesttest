@@ -15,6 +15,7 @@ function App() {
     <div className="App">
 
   <div>dere</div>
+  <div>dere</div>
     </div>
   );
 }

@@ -11,7 +11,8 @@ test("app",()=>{
  //const element = await screen.findByText("bbbb")
 //coklu buldurma
  const element = screen.getAllByText("dere")
-  expect(element[0]).toBeInTheDocument();
+  //expect(element[0]).toBeInTheDocument();
+  expect(element).toHaveLength(2);
 })
 //bu elementlerin durunmu dikkqt edilmesi gerekir
 // No Match	1 Match	1+ Match	Await?
